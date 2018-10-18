@@ -1,0 +1,16 @@
+{
+  "name": "my-eloquent-js",
+  "version": "1.0.0",
+  "description": "\"Coding all 21 chapers of 'Eloquent Javascript'\"",
+  "main": "inex.js",
+  "repisitory": "",
+  "autor": "Chase Owens <chasejonathanowens@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-airbnb": "^17.1.0",
+    "jest": "^23.6.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
