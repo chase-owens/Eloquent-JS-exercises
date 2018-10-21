@@ -11,6 +11,7 @@ function fizzbuzz() {
     }
 
     console.log(result || i);
+    return result || i;
   }
 }
 
@@ -33,6 +34,8 @@ function fizzbuzz() {
 
 // Tests
 
-test("loops from 1 through 100, and logs fizz when number divisible by three, buzz when divisible by 5 and fizzbuzz when divisible by 15", () => {
-  expext();
+describe("fizzbuzz()", () => {
+  test("loops from 1 through 100, and logs fizz when number divisible by three, buzz when divisible by 5 and fizzbuzz when divisible by 15", () => {
+    expext(fizzbuzz()).toMatch(/Buzz/);
+  });
 });

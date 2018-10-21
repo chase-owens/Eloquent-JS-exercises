@@ -1,4 +1,8 @@
-unction chessBoard(n) {
+function chessBoard(n) {
+  if ((n = 0)) {
+    return null;
+  }
+
   let board = "";
   let newRow = "\n";
   for (let i = 0; i < n; i++) {
@@ -36,7 +40,12 @@ function chessBoard(n) {
 }
 */
 
-test("builds a chess board with the height and width specified"),
-  () => {
-    expect(board.length).toEqual((n ^ 2) + n);
-  };
+describe("chessboard()", () => {
+  test("builds a chess board with the height and width specified", () => {
+    expect(chessBoard(2)).toMatch(/# \n #/);
+  });
+
+  test("n of 0 returns null", () => {
+    expect(chessBoard(0)).toBeNull();
+  });
+});
