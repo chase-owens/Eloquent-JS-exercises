@@ -2,7 +2,7 @@
 
 function fizzbuzz(n) {
   if (n == !Number) {
-    return "Please enter an Integer";
+    return "Please enter an Integer greater than 0";
   }
 
   let output;
@@ -42,6 +42,6 @@ function fizzbuzz() {
 describe("fizzbuzz()", () => {
   test("loops from 1 through 100, and logs fizz when number divisible by three, buzz when divisible by 5 and fizzbuzz when divisible by 15", () => {
     expect(fizzbuzz(100)).toMatch(/Buzz/);
-    expect(fizzbuzz(!Number)).toMatch(/Please enter an Integer/);
+    expect(fizzbuzz(!Number)).toMatch(/Please enter an Integer greater than 0/);
   });
 });
