@@ -2,8 +2,8 @@ for (let trianglePart = "#"; trianglePart.length < 8; trianglePart += "#")
   console.log(trianglePart);
 
 function triangle(n) {
-  if (typeof n == !Number) {
-    throw new Error("Enter an Integer");
+  if (n === !Number) {
+    return "Please enter an Integer";
   }
 
   if (n <= 0) {
@@ -17,14 +17,14 @@ function triangle(n) {
       trianglePiece += "#"
     )
       console.log(trianglePiece);
-    return trianglePiece;
   }
 }
 
 describe("triangle()", () => {
   test("output is what exected", () => {
-    expect(triangle(2)).toMatch(/##/);
+    //expect(triangle(2)).toMatch(/##/);
     expect(triangle(0)).toBeNull();
-    exptect(triangle(!Number)).toThrow(Error);
+    expect(triangle(1)).toBe(false);
+    expect(triangle(!Number)).toMatch(/Please enter an Integer/);
   });
 });
