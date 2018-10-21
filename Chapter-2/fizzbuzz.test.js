@@ -1,7 +1,12 @@
 // Code
 
-function fizzbuzz() {
-  for (let i = 1; i <= 100; i++) {
+function fizzbuzz(n) {
+  if (n == !Number) {
+    return "Please enter an Integer";
+  }
+
+  let output;
+  for (let i = 1; i <= n; i++) {
     let result = "";
     if (i % 3 == 0) {
       result += "Fizz";
@@ -9,10 +14,10 @@ function fizzbuzz() {
     if (i % 5 == 0) {
       result += "Buzz";
     }
-
     console.log(result || i);
-    return result || i;
+    output = result;
   }
+  return output;
 }
 
 /*
@@ -36,6 +41,7 @@ function fizzbuzz() {
 
 describe("fizzbuzz()", () => {
   test("loops from 1 through 100, and logs fizz when number divisible by three, buzz when divisible by 5 and fizzbuzz when divisible by 15", () => {
-    expect(fizzbuzz()).toMatch(/Buzz/);
+    expect(fizzbuzz(100)).toMatch(/Buzz/);
+    expect(fizzbuzz(!Number)).toMatch(/Please enter an Integer/);
   });
 });
