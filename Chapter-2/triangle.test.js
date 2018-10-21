@@ -9,7 +9,7 @@ function triangle(n) {
   if (n <= 0) {
     return null;
   } else if (n == 1) {
-    return undefined;
+    return false;
   } else {
     for (
       let trianglePiece = "#";
@@ -24,13 +24,7 @@ function triangle(n) {
 describe("triangle()", () => {
   test("output is what exected", () => {
     expect(triangle(2)).toMatch(/##/);
-  });
-
-  test("that 0 is null", () => {
     expect(triangle(0)).toBeNull();
-  });
-
-  test("if string thows error", () => {
     exptect(triangle(!Number)).toThrow(Error);
   });
 });

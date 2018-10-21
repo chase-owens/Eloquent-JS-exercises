@@ -16,6 +16,7 @@ function chessBoard(n) {
     board += newRow;
   }
   console.log(board);
+  return board;
 }
 
 //First solution
@@ -42,10 +43,7 @@ function chessBoard(n) {
 
 describe("chessboard()", () => {
   test("builds a chess board with the height and width specified", () => {
-    expect(chessBoard(2)).toMatch(/# \n #/);
-  });
-
-  test("n of 0 returns null", () => {
+    expect(chessBoard(2)).toMatch(/#/);
     expect(chessBoard(0)).toBeNull();
   });
 });
