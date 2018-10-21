@@ -1,5 +1,5 @@
 function chessBoard(n) {
-  if ((n = 0)) {
+  if (n == 0) {
     return null;
   }
 
