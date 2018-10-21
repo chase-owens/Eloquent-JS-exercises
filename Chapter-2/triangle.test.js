@@ -2,6 +2,10 @@ for (let trianglePart = "#"; trianglePart.length < 8; trianglePart += "#")
   console.log(trianglePart);
 
 function triangle(n) {
+  if (typeof n == !Number) {
+    throw new Error("Enter an Integer");
+  }
+
   if (n <= 0) {
     return null;
   } else if (n == 1) {
@@ -27,6 +31,6 @@ describe("triangle()", () => {
   });
 
   test("if string thows error", () => {
-    exptect(triangle(!Number)).toThrow(error);
+    exptect(triangle(!Number)).toThrow(Error);
   });
 });
