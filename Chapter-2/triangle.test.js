@@ -1,7 +1,7 @@
 for (let trianglePart = "#"; trianglePart.length < 8; trianglePart += "#")
   console.log(trianglePart);
 
-function triangle(n) {
+const triangle = n => {
   if (n === !Number) {
     return "Please enter an Integer";
   }
@@ -18,7 +18,7 @@ function triangle(n) {
     )
       console.log(trianglePiece);
   }
-}
+};
 
 describe("triangle()", () => {
   test("output is what exected", () => {

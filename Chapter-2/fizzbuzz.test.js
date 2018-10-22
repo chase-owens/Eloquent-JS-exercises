@@ -1,6 +1,6 @@
 // Code
 
-function fizzbuzz(n) {
+const fizzbuzz = n => {
   if (n == !Number) {
     return "Please enter an Integer greater than 0";
   }
@@ -18,7 +18,7 @@ function fizzbuzz(n) {
     output = result;
   }
   return output;
-}
+};
 
 /*
 First attempt
