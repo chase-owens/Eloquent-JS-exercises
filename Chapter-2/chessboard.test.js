@@ -1,4 +1,4 @@
-const chessBoard = n => {
+function chessBoard(n) {
   if (n == 0) {
     return null;
   }
@@ -17,7 +17,7 @@ const chessBoard = n => {
   }
   console.log(board);
   return board;
-};
+}
 
 //First solution
 /*

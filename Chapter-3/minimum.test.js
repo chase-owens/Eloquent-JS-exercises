@@ -1,12 +1,12 @@
-const minimum = (a, b) => {
+function minimum(a, b) {
+  if (a === !Number && b === !Number) {
+    return "Please enter an Integer";
+  }
   if (a === b) {
     return undefined;
   }
-  if (a == String && b == String && a != b) {
-    return "Please enter an Integer";
-  }
   return a < b ? a : b;
-};
+}
 
 describe("minimum()", () => {
   test("returns minimum value", () => {

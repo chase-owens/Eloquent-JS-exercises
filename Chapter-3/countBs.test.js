@@ -1,4 +1,4 @@
-let countBs = word => {
+function countBs(word) {
   if (word == !String) {
     return "Enter a word";
   }
@@ -9,7 +9,7 @@ let countBs = word => {
     }
   }
   return bCount;
-};
+}
 
 describe("countBs", () => {
   test("counts uppercase Bs", () => {
