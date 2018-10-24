@@ -1,4 +1,4 @@
-const isEven = n => {
+function isEven(n) {
   if (n === 0) {
     return true;
   }
@@ -6,7 +6,7 @@ const isEven = n => {
     return "Please enter an Integer";
   }
   return n % 2 === 0 ? true : false;
-};
+}
 
 describe("isEven()", () => {
   test("whether a number is even or odd", () => {
